@@ -1,15 +1,33 @@
-public class Carro extends Veiculos {
+public class Veiculos {
 
-    private String modelo;
+    private String placa;
+    private String marca;
 
-    public Carro(String placa, String marca, String modelo) {
-        super(placa, marca);
-        this.modelo = modelo;
+    public Veiculos(String placa, String marca) {
+        this.placa = placa;
+        this.marca = marca;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     @Override
     public String toString() {
-        return "\nCARRO" + super.toString() +        
-                "\nModelo: " + modelo + "\n";
+        return
+                "\nPlaca: " + placa +
+                "\nMarca: " + marca;
     }
 }
